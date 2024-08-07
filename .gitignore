@@ -1,0 +1,6 @@
+# Ignore Python bytecode files
+**/__pycache__/
+**/*.py[cod]
+
+# Specific to your project structure
+src/pros_yolo/pros_yolo/__pycache__/*
