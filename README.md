@@ -3,30 +3,9 @@
 
 ## 用法
 
-1. 進入 docker  環境
+1. 開啟環境
 ```
-./setup.sh 
-```
-2. 編譯專案
-```
-r         
-```
-3. 打開多視窗 (使用 tmux)
-```
-tmux       
-```
-4. 開啟 rosbridge：
-```
-b          
-```
-5. 打開新視窗（例如：ctrl+b+c）並運行 car_control 節點：
-```
-ros2 run pros_soccer car_control
-```
-
-6. 打開新視窗（例如：ctrl+b+c）並運行 soccer_node 節點：
-```
-ros2 run pros_yolo soccer_node
+./docker-compose.sh
 ```
 
 ## 如何控制車子
