@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "car_control = pros_soccer.car_control:main",
         ],
     },
 )
