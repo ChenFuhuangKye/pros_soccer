@@ -76,14 +76,21 @@ class car_control(Node):
             'Class': class_match.group(1) if class_match else None,
             'BBox': bbox_list
         }
-        if result_dict['Class'] == 'soccer' :
-            bbox_list = result_dict['BBox']
-            x1, y1, x2, y2 = bbox_list
-            x_center = (x1 + x2) / 2            
-            if width - range < x_center or x_center < width + range :
-                self.is_face_soccer = True
-        else:
+        try:
+            if result_dict['Class'] == 'soccer':
+                bbox_list = result_dict['BBox']
+                x1, y1, x2, y2 = bbox_list
+                x_center = (x1 + x2) / 2            
+                if width - range < x_center < width + range:
+                    self.is_face_soccer = True
+                else:
+                    self.is_face_soccer = False
+            else:
+                self.is_face_soccer = False
+        except Exception as e:
+            print(f"An error occurred: {e}")
             self.is_face_soccer = False
+
                     
     def scan_callback(self, msg):
         '''
