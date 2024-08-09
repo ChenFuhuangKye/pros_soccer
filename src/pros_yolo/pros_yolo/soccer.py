@@ -43,13 +43,11 @@ class pros_yolo(Node):
         # publish bbox info
         self.publish_bbox(results)
 
+        
+
         # encode frame as CompressedImage and publish
         self.publish_image(annotated_frame)
                 
-        # click 'q' to quit
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            cv2.destroyAllWindows()
-            rclpy.shutdown()
 
     def publish_bbox(self, results):
         bbox_info = ""

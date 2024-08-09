@@ -9,3 +9,6 @@ src/pros_yolo/pros_yolo/__pycache__/*
 src/build/
 src/install/
 src/log/
+
+# Ignore the python virtual environment
+venv/
