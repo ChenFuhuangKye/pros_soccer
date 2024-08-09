@@ -4,3 +4,8 @@
 
 # Specific to your project structure
 src/pros_yolo/pros_yolo/__pycache__/*
+
+# Ignore the build directory
+src/build/
+src/install/
+src/log/
