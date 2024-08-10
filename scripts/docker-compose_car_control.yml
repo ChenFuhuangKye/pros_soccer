@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  car_control:
+    image: kyehuang/pros_yolo:latest
+    networks:
+      - my_bridge_network
+    command: /bin/bash -c "source /opt/ros/humble/setup.bash && ros2 run pros_yolo soccer_node"
+
+  rosbridge:
+    image: kyehuang/pros_yolo:latest
+    networks:
+      - my_bridge_network
+    ports:
+      - "9090:9090"
+    command: /bin/bash -c "source /opt/ros/humble/setup.bash && ros2 launch rosbridge_server rosbridge_websocket_launch.xml"
+
+networks:
+  my_bridge_network:
+    driver: bridge

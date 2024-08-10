@@ -5,7 +5,7 @@
 
 1. 開啟環境
 ```
-./docker-compose.sh
+./car_control.sh
 ```
 
 ## 如何控制車子

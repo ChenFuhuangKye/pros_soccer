@@ -118,11 +118,10 @@ class CarControl:
 
 def main():
     car_control = CarControl()
-    print(car_control.is_face_soccer)
     while (True):     
-        if  car_control.is_face_soccer:             
-            print(car_control.is_face_soccer)            
-            pass
+        print(car_control.is_face_soccer)
+        if  car_control.is_face_soccer:            
+            car_control.set_two_wheel(0, 0)
         else:
             car_control.set_two_wheel(-1, 1)
             pass
